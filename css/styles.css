@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+/* General */
+
+:root {
+  --title: "Cabin";
+  --text: "Old Standard TT";
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 5rem auto;
+  max-width: 50rem;
+}
+
+/* Header */
+
+h1 {
+  font-family: var(--title);
+  text-align: center;
+  font-size: 3rem;
+}
+
+hr {
+  margin: 1rem 0;
+  color: #2a2a2a;
+}
+
+hr:nth-of-type(2) {
+  margin-bottom: 4rem;
+}
+
+p {
+  font-family: var(--text);
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Forms */
+
+#book-search h2, #book-add h2 {
+  font-family: var(--title);
+  font-size: 1.8rem;
+  margin: 0 0 1rem 3rem;
+  letter-spacing: 0.2rem;
+
+}
+
+#book-search input, #book-add input {
+  font-family: var(--text);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 3rem;
+  border: 0.1rem solid #2a2a2a;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+#book-search input:focus, #book-add input:focus, #book-add button {
+  outline: none;
+}
+
+#book-search input::placeholder, #book-add input::placeholder {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* Book list */
+
+#book-list {
+  border: 0.1rem solid #2a2a2a;
+  border-radius: 0.5rem;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+#book-list legend {
+  display: inline-block;
+  font-family: var(--title);
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  letter-spacing: 0.2rem;
+}
+
+#book-list li {
+  list-style: none;
+  font-family: var(--text);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-auto-flow: column;
+  border-left: 0.3rem solid #425560;
+  margin: 2rem 0;
+}
+
+#book-list li:hover {
+  border-left: 0.3rem solid #1e9fe9;
+}
+
+.title {
+  display: inline-block;
+  line-height: 3.2rem;
+  padding-left: 1rem;
+}
+
+.goodreads {
+  display: inline-block;
+  background: url(../images/svg/book.svg);
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-left: 1rem;
+}
+
+.delete {
+  display: inline-block;
+  width: 10rem;
+  border: 0.1rem solid #501010;
+  background: rgba(80, 16, 16, 0.5);
+  border-radius: 0.5rem;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: rgba(80, 16, 16, 1);
+}
+
+/* Adding books */
+
+#book-add input[name="bookTitle"] {
+  width: 60%;
+}
+
+#book-add button[name="bookAdd"] {
+  color: #fff;
+  height: 3rem;
+  width: 10rem;
+  border: 0.1rem solid #205221;
+  border-radius: 0.5rem;
+  background: rgba(32, 82, 33, 0.5);
+  font-family: var(--text);
+  font-size: 1.6rem;
+  cursor: pointer;
+  float: right;
+  margin-right: 2rem;
+}
+
+#book-add a {
+  position: relative;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  vertical-align: top;
+  background: url(../images/link.jpeg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+#book-add a::after {
+  content: '';
+	border-left: 0.6rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-top: 0.8rem solid #2a2a2a;
+  margin-left: 0.8rem;
+}
+
+#book-add a.show::after {
+  display: initial;
+}
+
+#book-add a.hidden::after {
+  display: none;
+}
+
+#book-add input[name="bookLink"] {
+  position: absolute;
+  width: 20rem;
+  left: -9rem;
+  top: -3.8rem;
+  display: none;
+}
+
+#book-add button[name="bookAdd"]:hover {
+  background: rgba(32, 82, 33, 1);
+}
+
+.wrapper p[name="warning"] {
+  color: red;
+  font-size: 1.2rem;
+  font-style: italic;
+  position: relative;
+  bottom: 1.5rem;
+  left: -10rem;
+}

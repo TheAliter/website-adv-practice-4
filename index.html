@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wish List</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+<!-- Header -->
+    <header>
+      <h1>Turtle's Wish List</h1>
+      <hr>
+      <p>List of books that I want to read</p>
+      <hr>
+    </header>
+<!-- Search Box -->
+    <form id="book-search">
+      <h2>Search</h2>
+      <input type="text" name="searchBox" placeholder="Search for book title..">
+    </form>
+<!-- Book List -->
+    <fieldset id="book-list">
+      <legend>List</legend>
+      <li>
+        <span class="title">Ready Player One</span>
+        <a class="goodreads" href="https://www.goodreads.com/book/show/20603758-ready-player-one" target="_blank"></a>
+        <span class="delete">Delete</span>
+      </li>
+      <li>
+        <span class="title">Digital Fortress</span>
+        <a class="goodreads" href="https://www.goodreads.com/book/show/11125.Digital_Fortress" target="_blank"></a>
+        <span class="delete">Delete</span>
+      </li>
+      <li>
+        <span class="title">Off To Be The Wizard</span>
+        <a class="goodreads" href="https://www.goodreads.com/book/show/18616975-off-to-be-the-wizard" target="_blank"></a>
+        <span class="delete">Delete</span>
+      </li>
+      <li>
+        <span class="title">Ender's Game</span>
+        <a class="goodreads" href="https://www.goodreads.com/book/show/375802.Ender_s_Game" target="_blank"></a>
+        <span class="delete">Delete</span>
+      </li>
+      <li>
+        <span class="title">Harry Potter and Sorcerer's Stone</span>
+        <a class="goodreads" href="https://www.goodreads.com/book/show/3.Harry_Potter_and_the_Sorcerer_s_Stone" target="_blank"></a>
+        <span class="delete">Delete</span>
+      </li>
+      <li>
+        <span class="title">Erebos</span>
+        <a class="goodreads" href="https://www.goodreads.com/book/show/7748743-erebos" target="_blank"></a>
+        <span class="delete">Delete</span>
+      </li>
+  </fieldset>
+<!-- Adding Books -->
+  <form id="book-add">
+      <h2>Add A Book</h2>
+      <input type="text" name="bookTitle" placeholder="Enter book's title">
+      <a class="hidden"><input type="text" name="bookLink" placeholder="Enter book's link"></a>
+      <button name="bookAdd">Add</button>
+  </form>
+
+  </div>
+</body>
+</html>
